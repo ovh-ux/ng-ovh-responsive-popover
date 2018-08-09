@@ -9,7 +9,7 @@
  *
  *  **Note:** when ui-bootstrap version >= 2.0 will be used, the only thing to do should be to add a custom class with the 'popover-class' option of the uibPopover directive. To be tested.
  */
-angular.module("ovh-angular-responsive-popover").directive("responsivePopoverClass", function (matchmedia, responsivePopover) {
+export default function (matchmedia, responsivePopover) {
     "use strict";
 
     return {
@@ -50,4 +50,4 @@ angular.module("ovh-angular-responsive-popover").directive("responsivePopoverCla
         }
     };
 
-});
+};

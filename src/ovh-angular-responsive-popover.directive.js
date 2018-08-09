@@ -18,10 +18,7 @@
  *  </button>
  *  </pre>
  */
-angular.module("ovh-angular-responsive-popover").directive("responsivePopover", function ($uibTooltip) {
-    "use strict";
-
-    return $uibTooltip("responsivePopover", "popover", "click", {
+export default ($uibTooltip) =>
+    $uibTooltip("responsivePopover", "popover", "click", {
         useContentExp: true
     });
-});

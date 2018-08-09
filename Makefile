@@ -2,7 +2,6 @@
 NODE=node
 NPM=npm
 GRUNT=grunt
-BOWER=bower
 GIT=git
 CD=cd
 ECHO=@echo
@@ -20,12 +19,6 @@ GRUNT_DEP=$(NODE_DIR)/grunt
 
 #### MACRO ####
 VERSION=`grep -Po '(?<="version": ")[^"]*' package.json`
-
-#### OTHER ####
-ifneq ($(strip $(bower_registry)),)
-BOWER_PARAM=--config.registry=$(bower_registry)
-endif
-
 
 help:
 	$(ECHO) "_____________________________"
@@ -71,8 +64,6 @@ release: update-release build commit-release
 #############
 # Sub tasks #
 #############
-
-$(BOWER_DIR): install
 
 $(NODE_DIR)/%: install
 	# DO NOT DELETE - this comment is needed because make does not process this step

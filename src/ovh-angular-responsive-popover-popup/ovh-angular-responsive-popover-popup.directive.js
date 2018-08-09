@@ -1,6 +1,4 @@
-angular.module("ovh-angular-responsive-popover").directive("responsivePopoverPopup", function () {
-    "use strict";
-
+export default function () {
     return {
         replace: true,
         scope: {
@@ -12,6 +10,6 @@ angular.module("ovh-angular-responsive-popover").directive("responsivePopoverPop
             isOpen: "&",
             originScope: "&"
         },
-        templateUrl: "ovh-angular-responsive-popover-popup/ovh-angular-responsive-popover-popup.html"
+        template: require("./ovh-angular-responsive-popover-popup.html")
     };
-});
+};

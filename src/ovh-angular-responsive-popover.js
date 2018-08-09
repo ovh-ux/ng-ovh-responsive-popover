@@ -16,9 +16,20 @@
  *  **Note:** when ui-bootstrap will be updated to version >= 2.0, it should be possible to remove `responsivePopover` directive and use uibPopover directive with custom class responsive-popover-class. So `responsivePopoverClass` directive will be the only directive of this component.
  *
  */
-(function () {
-    "use strict";
+import uiBootstrap from 'angular-ui-bootstrap';
+require("matchmedia-ng");
 
-    angular.module("ovh-angular-responsive-popover", ["matchmedia-ng", "ui.bootstrap"]);
+import responsivePopoverDirective from './ovh-angular-responsive-popover.directive';
+import responsivePopoverProvider from './ovh-angular-responsive-popover.provider';
 
-})();
+import responsivePopoverClass from './ovh-angular-responsive-popover-class/ovh-angular-responsive-popover-class';
+import responsivePopoverPopup from './ovh-angular-responsive-popover-popup/ovh-angular-responsive-popover-popup';
+
+export default angular
+    .module("ovh-angular-responsive-popover", [
+        "matchmedia-ng",
+        uiBootstrap
+    ])
+    .directive("responsivePopover", responsivePopoverDirective)
+    .provider("responsivePopover", responsivePopoverProvider)
+    .name;

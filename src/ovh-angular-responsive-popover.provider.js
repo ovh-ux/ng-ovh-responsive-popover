@@ -13,7 +13,7 @@
  *      });
  * </pre>
  */
-angular.module("ovh-angular-responsive-popover").provider("responsivePopover", function () {
+export default function () {
     "use strict";
 
     var self = this;
@@ -69,5 +69,4 @@ angular.module("ovh-angular-responsive-popover").provider("responsivePopover", f
             }
         };
     };
-
-});
+};
