@@ -22,9 +22,6 @@ require("matchmedia-ng");
 import responsivePopoverDirective from './ovh-angular-responsive-popover.directive';
 import responsivePopoverProvider from './ovh-angular-responsive-popover.provider';
 
-import responsivePopoverClass from './ovh-angular-responsive-popover-class/ovh-angular-responsive-popover-class';
-import responsivePopoverPopup from './ovh-angular-responsive-popover-popup/ovh-angular-responsive-popover-popup';
-
 export default angular
     .module("ovh-angular-responsive-popover", [
         "matchmedia-ng",

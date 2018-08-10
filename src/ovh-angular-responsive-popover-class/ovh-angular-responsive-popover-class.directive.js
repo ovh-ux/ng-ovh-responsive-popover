@@ -9,7 +9,7 @@
  *
  *  **Note:** when ui-bootstrap version >= 2.0 will be used, the only thing to do should be to add a custom class with the 'popover-class' option of the uibPopover directive. To be tested.
  */
-export default function (matchmedia, responsivePopover) {
+export default /* @ngInject */ function (matchmedia, responsivePopover) {
     "use strict";
 
     return {

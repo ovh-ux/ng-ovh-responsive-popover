@@ -18,7 +18,7 @@
  *  </button>
  *  </pre>
  */
-export default ($uibTooltip) =>
+export default /* @ngInject */ ($uibTooltip) =>
     $uibTooltip("responsivePopover", "popover", "click", {
         useContentExp: true
     });
