@@ -1,3 +1,5 @@
+import template from './ovh-angular-responsive-popover-popup.html';
+
 export default function () {
     return {
         replace: true,
@@ -10,6 +12,6 @@ export default function () {
             isOpen: "&",
             originScope: "&"
         },
-        template: require("./ovh-angular-responsive-popover-popup.html")
+        template
     };
 };
