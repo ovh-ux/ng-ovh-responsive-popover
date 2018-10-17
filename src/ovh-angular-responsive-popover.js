@@ -17,7 +17,7 @@
  *
  */
 import 'angular-ui-bootstrap';
-require("matchmedia-ng");
+import 'matchmedia-ng';
 
 import responsivePopoverDirective from './ovh-angular-responsive-popover.directive';
 import responsivePopoverProvider from './ovh-angular-responsive-popover.provider';
@@ -25,16 +25,14 @@ import responsivePopoverPopup from './ovh-angular-responsive-popover-popup/ovh-a
 
 import './less/ovh-angular-responsive-popover.less';
 
-console.log('responsive-popover');
+const moduleName = "ovh-angular-responsive-popover";
 
-angular
-    .module("ovh-angular-responsive-popover", [
-        "matchmedia-ng",
-        "ui.bootstrap",
-        responsivePopoverPopup
-    ])
-    .directive("responsivePopover", responsivePopoverDirective)
-    .provider("responsivePopover", responsivePopoverProvider)
-    .name;
+angular.module(moduleName, [
+  "matchmedia-ng",
+  "ui.bootstrap",
+  responsivePopoverPopup
+])
+.directive("responsivePopover", responsivePopoverDirective)
+.provider("responsivePopover", responsivePopoverProvider);
 
-export default 'ovh-angular-responsive-popover';
+export default moduleName;
