@@ -160,6 +160,13 @@
     rollup-plugin-postcss "^1.6.2"
     rollup-pluginutils "^2.3.3"
 
+"@ovh-ux/translate-async-loader@^1.0.0":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@ovh-ux/translate-async-loader/-/translate-async-loader-1.0.3.tgz#448e30f7f4b57652b65c4c4a36efd256f9fd5529"
+  integrity sha512-l5zGuQXYl+joMAnIZfStF1KnMP5evSYnz1Dn/OVpAv6fyM1/dt//4kcG+0Z/lW0Q/joKedyp2Zrarx6iRKlcBg==
+  dependencies:
+    "@ovh-ux/component-rollup-config" "^1.0.0"
+
 "@ovh-ux/translations-build-tools@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@ovh-ux/translations-build-tools/-/translations-build-tools-1.0.0.tgz#318af155edbe4e758c67554582f3683b787cfb0f"
