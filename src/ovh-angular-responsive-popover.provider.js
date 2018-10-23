@@ -3,7 +3,8 @@
  * @name responsivePopover.responsivePopoverProvider
  *
  * @description
- * responsivePopoverProvider allows developper to configure which mediaQuery will be considered as a mobile.
+ * responsivePopoverProvider allows developper to configure which mediaQuery will be considered
+ * as a mobile.
  *
  * @example
  * <pre>
@@ -14,16 +15,14 @@
  * </pre>
  */
 export default function () {
-    "use strict";
+  const self = this;
+  let mobileMediaQuery = '(max-width: 980px)';
 
-    var self = this;
-    var mobileMediaQuery = "(max-width: 980px)";
-
-    /*= ====================================
+  /*= ====================================
     =            CONFIGURATION            =
-    =====================================*/
+    ===================================== */
 
-    /**
+  /**
      *  @ngdoc method
      *  @name responsivePopover.responsivePopoverProvider#setMobileMediaQuery
      *  @methodOf responsivePopover.responsivePopoverProvider
@@ -35,38 +34,39 @@ export default function () {
      *
      *  @return {String} The new query provided.
      */
-    self.setMobileMediaQuery = function (query) {
-        if (query) {
-            mobileMediaQuery = query;
-        }
+  self.setMobileMediaQuery = function (query) {
+    if (query) {
+      mobileMediaQuery = query;
+    }
 
-        return mobileMediaQuery;
-    };
+    return mobileMediaQuery;
+  };
 
-    /* -----  End of CONFIGURATION  ------*/
+  /* -----  End of CONFIGURATION  ------*/
 
-    /**
+  /**
      *  @ngdoc service
      *  @name responsivePopover.service:responsivePopover
      *
      *  @description
      *  This service enable you to get configured values.
      */
-    self.$get = function () {
-        return {
-            /**
+  self.$get = function () {
+    return {
+      /**
              *  @ngdoc method
              *  @name responsivePopover.service:responsivePopover#getMobileMediaQuery
              *  @methodOf responsivePopover.service:responsivePopover
              *
              *  @description
-             *  Get the current configured media query. It is used to detect the popover display (simple popover or full screen popover for mobile).
+             *  Get the current configured media query. It is used to detect the popover display
+             *  (simple popover or full screen popover for mobile).
              *
              *  @return {String} The configured mediaQuery.
              */
-            getMobileMediaQuery: function () {
-                return mobileMediaQuery;
-            }
-        };
+      getMobileMediaQuery() {
+        return mobileMediaQuery;
+      },
     };
-};
+  };
+}
