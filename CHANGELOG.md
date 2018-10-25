@@ -1,3 +1,13 @@
+<a name="5.0.0-alpha.1"></a>
+# [5.0.0-alpha.1](https://github.com/ovh-ux/ovh-angular-responsive-popover/compare/v5.0.0-alpha.0...v5.0.0-alpha.1) (2018-10-25)
+
+
+### Bug Fixes
+
+* **responsivepopoverpopup:** module name is now correct ([93e1c57](https://github.com/ovh-ux/ovh-angular-responsive-popover/commit/93e1c57))
+
+
+
 <a name="5.0.0-alpha.0"></a>
 # [5.0.0-alpha.0](https://github.com/ovh-ux/ovh-angular-responsive-popover/compare/4.0.1...5.0.0-alpha.0) (2018-10-23)
 
