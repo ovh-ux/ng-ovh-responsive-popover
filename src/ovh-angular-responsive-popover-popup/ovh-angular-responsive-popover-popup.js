@@ -1,10 +1,10 @@
 import angular from 'angular';
 import responsivePopoverPopupDirective from './ovh-angular-responsive-popover-popup.directive';
 
-const moduleName = 'responsivePopoverPopup';
+const moduleName = 'ovh-angular-responsive-popover-popup';
 
 angular
-  .module('ovh-angular-responsive-popover-popup', [])
-  .directive(moduleName, responsivePopoverPopupDirective);
+  .module(moduleName, [])
+  .directive('responsivePopoverPopup', responsivePopoverPopupDirective);
 
 export default moduleName;
