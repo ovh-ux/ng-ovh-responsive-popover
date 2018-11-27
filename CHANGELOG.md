@@ -1,3 +1,12 @@
+# [5.0.0-alpha.2](https://github.com/ovh-ux/ovh-angular-responsive-popover/compare/v5.0.0-alpha.1...v5.0.0-alpha.2) (2018-11-27)
+
+
+### Bug Fixes
+
+* bump npm-run-all@4.1.5 ([e3b6b7e](https://github.com/ovh-ux/ovh-angular-responsive-popover/commit/e3b6b7e))
+
+
+
 <a name="5.0.0-alpha.1"></a>
 # [5.0.0-alpha.1](https://github.com/ovh-ux/ovh-angular-responsive-popover/compare/v5.0.0-alpha.0...v5.0.0-alpha.1) (2018-10-25)
 
