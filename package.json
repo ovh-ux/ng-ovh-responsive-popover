@@ -12,6 +12,7 @@
     "dist"
   ],
   "main": "./dist/cjs/ovh-angular-responsive-popover.js",
+  "browser": "./dist/umd/ovh-angular-responsive-popover.js",
   "scripts": {
     "build": "rollup -c",
     "lint": "run-p lint:css lint:js",
@@ -28,7 +29,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "browser": "./dist/umd/ovh-angular-responsive-popover.js",
   "dependencies": {
     "@ovh-ux/translate-async-loader": "^1.0.0",
     "jquery": "^2.1.3"
