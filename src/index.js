@@ -25,21 +25,22 @@ import angular from 'angular';
 import 'angular-ui-bootstrap';
 import 'matchmedia-ng';
 
-import responsivePopoverDirective from './ovh-angular-responsive-popover.directive';
-import responsivePopoverProvider from './ovh-angular-responsive-popover.provider';
-import responsivePopoverPopup from './ovh-angular-responsive-popover-popup/ovh-angular-responsive-popover-popup';
+import ngOvhResponsivePopoverPopup from './popup';
 
-import './less/ovh-angular-responsive-popover.less';
+import directive from './directive';
+import provider from './provider';
 
-const moduleName = 'ovh-angular-responsive-popover';
+import './index.less';
+
+const moduleName = 'ngOvhResponsivePopover';
 
 angular
   .module(moduleName, [
     'matchmedia-ng',
     'ui.bootstrap',
-    responsivePopoverPopup,
+    ngOvhResponsivePopoverPopup,
   ])
-  .directive('responsivePopover', responsivePopoverDirective)
-  .provider('responsivePopover', responsivePopoverProvider);
+  .directive('responsivePopover', directive)
+  .provider('responsivePopover', provider);
 
 export default moduleName;

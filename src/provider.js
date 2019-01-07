@@ -51,7 +51,7 @@ export default function () {
      *  @description
      *  This service enable you to get configured values.
      */
-  self.$get = function () {
+  self.$get = /* @ngInject */ function () {
     return {
       /**
              *  @ngdoc method

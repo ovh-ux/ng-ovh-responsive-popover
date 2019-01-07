@@ -1,4 +1,4 @@
-import template from './ovh-angular-responsive-popover-popup.html';
+import template from './template.html';
 
 export default function () {
   return {
