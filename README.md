@@ -8,11 +8,11 @@
 
 > `responsive-popover` module is used to display a popover and adapt it to the screen dimension.
 
- The two major directives are:
-     - the `responsivePopover` directive that will display a uibPopover to the DOM element you instanciate it;
-     - the `responsivePopoverClass` directive that is added to the popover popup.
+The two major directives are:
+- the `responsivePopover` directive that will display a uibPopover to the DOM element you instanciate it;
+- the `responsivePopoverClass` directive that is added to the popover popup.
 
- **Note:** when ui-bootstrap will be updated to version >= 2.0, it should be possible to remove `responsivePopover` directive and use uibPopover directive with custom class responsive-popover-class. So `responsivePopoverClass` directive will be the only directive of this component.
+**Note:** when ui-bootstrap will be updated to version >= 2.0, it should be possible to remove `responsivePopover` directive and use uibPopover directive with custom class responsive-popover-class. So `responsivePopoverClass` directive will be the only directive of this component.
 
 ## Dependencies
 
@@ -23,19 +23,19 @@
 
 ## Bower
 
-    bower install ovh-angular-responsive-popover --save
+  bower install ovh-angular-responsive-popover --save
 
 ## NPM
 
-    npm install ovh-angular-responsive-popover --save
+  npm install ovh-angular-responsive-popover --save
 
 ## Get the sources
 
 ```bash
-    git clone https://github.com/ovh-ux/ovh-angular-responsive-popover.git
-    cd ovh-angular-responsive-popover
-    npm install
-    bower install
+  git clone https://github.com/ovh-ux/ovh-angular-responsive-popover.git
+  cd ovh-angular-responsive-popover
+  npm install
+  bower install
 ```
 
 You've developed a new cool feature ? Fixed an annoying bug ? We'd be happy
@@ -45,26 +45,27 @@ Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-responsiv
 
 # Related links
 
- * Contribute: https://github.com/ovh-ux/ovh-angular-responsive-popover/blob/master/CONTRIBUTING.md
- * Report bugs: https://github.com/ovh-ux/ovh-angular-responsive-popover/issues
- * Get latest version: https://github.com/ovh-ux/ovh-angular-responsive-popover
+* Contribute: https://github.com/ovh-ux/ovh-angular-responsive-popover/blob/master/CONTRIBUTING.md
+* Report bugs: https://github.com/ovh-ux/ovh-angular-responsive-popover/issues
+* Get latest version: https://github.com/ovh-ux/ovh-angular-responsive-popover
 
+Then inject responsivePopover module in your module declaration:
 
- Then inject responsivePopover module in your module declaration:
- ```javascript
- angular.module("myModule", [
-     ...
-     "ovh-angular-responsive-popover",
-     ...
- ]);
- ```
+```js
+import angular from 'angular';
+
+angular
+  .module('myApp', [
+    'ovh-angular-responsive-popover',
+  ]);
+```
 
 ## Documentation
 
 For a full documentation of the module, launch:
 
-```
-# grunt ngdocs && grunt connect
+```sh
+grunt ngdocs && grunt connect
 ```
 
 Then go on `http://localhost:9090`.
@@ -75,25 +76,26 @@ Or simply follow the md version of documentation:
 
 This is the main directive of the `responsivePopover` module. In fact it's an extended uibPopover with an additional class applied to it's content template.
 
- For available options, see the doc of [uibPopover](https://angular-ui.github.io/bootstrap/#/popover).
+For available options, see the doc of [uibPopover](https://angular-ui.github.io/bootstrap/#/popover).
 
 #### Example
 
-  The following example will open a popover with the content of path/of/popover/content.html file inside. This popover will be closed when focus is lost inside of it.
- ```html
- <button type="button"
-         data-responsive-popover="'path/of/popover/content.html'"
-         data-popover-placement="bottom-left"
-         data-popover-trigger="focus">
- </button>
- ```
+The following example will open a popover with the content of path/of/popover/content.html file inside. This popover will be closed when focus is lost inside of it.
+
+```html
+<button type="button"
+        data-responsive-popover="'path/of/popover/content.html'"
+        data-popover-placement="bottom-left"
+        data-popover-trigger="focus">
+</button>
+```
 
 ### <a name="responsivePopover_directive_responsivePopoverClass"></a>`responsivePopoverClass` - directive
 
 This directive manage the way the popover is displayed. This uses the configuration setted into the `responsivePopoverProvider` to detect if the popover needs to be displayed on full screen or to be displayed normally.
- It is automatically setted by `responsivePopover` directive.
+It is automatically setted by `responsivePopover` directive.
 
- **Note:** when ui-bootstrap version >= 2.0 will be used, the only thing to do should be to add a custom class with the 'popover-class' option of the uibPopover directive. To be tested.
+**Note:** when ui-bootstrap version >= 2.0 will be used, the only thing to do should be to add a custom class with the 'popover-class' option of the uibPopover directive. To be tested.
 
 ### <a name="responsivePopover_responsivePopoverProvider"></a>`responsivePopoverProvider` - provider
 
@@ -119,11 +121,15 @@ Allows you to determine what app will consider as a mobile for responsive popove
 
 #### Example
 
-  ```javascript
-    angular.module("myManagerApp").config(function (responsivePopoverProvider) {
-         // tell to the module that we consider a mobile device with at least 800px width
-         responsivePopoverProvider.setMobileMediaQuery("(max-width: 800px)");
-     });
+```js
+import angular from 'angular';
+
+angular
+  .module('myApp')
+  .config(/* @ngInject */ (responsivePopoverProvider) => {
+    // tell to the module that we consider a mobile device with at least 800px width
+    responsivePopoverProvider.setMobileMediaQuery('(max-width: 800px)');
+  });
 ```
 
 ### <a name="responsivePopover_service_responsivePopover"></a>`responsivePopover` - service
