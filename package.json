@@ -49,18 +49,5 @@
     "angular": "^1.7.0",
     "angular-ui-bootstrap": "1.3.3",
     "matchmedia-ng": "^1.0.8"
-  },
-  "lint-staged": {
-    "*.html": [
-      "htmlhint 'src/**/*.html'"
-    ],
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.less": [
-      "stylelint 'src/**/*.less' --fix",
-      "git add"
-    ]
   }
 }
