@@ -1,12 +1,26 @@
-# responsive-popover
+# ng-ovh-responsive-popover
 
-![OVH component](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
+> AngularJS module used to display a popover and adapt it to the screen dimension.
 
-[![NPM](https://nodei.co/npm/ovh-angular-responsive-popover.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-angular-responsive-popover/)
+[![Downloads](https://badgen.net/npm/dt/@ovh-ux/ng-ovh-responsive-popover)](https://npmjs.com/package/@ovh-ux/ng-ovh-responsive-popover) [![Dependencies](https://badgen.net/david/dep/ovh-ux/ng-ovh-responsive-popover)](https://npmjs.com/package/@ovh-ux/ng-ovh-responsive-popover?activeTab=dependencies) [![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ng-ovh-responsive-popover)](https://npmjs.com/package/@ovh-ux/ng-ovh-responsive-popover?activeTab=dependencies) [![Gitter](https://badgen.net/badge/gitter/ovh-ux/blue?icon=gitter)](https://gitter.im/ovh/ux)
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2017.svg)]() [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux) [![Build Status](https://travis-ci.org/ovh/ovh-angular-responsive-popover.svg)](https://travis-ci.org/ovh/ovh-angular-responsive-popover)
+## Install
 
-> `responsive-popover` module is used to display a popover and adapt it to the screen dimension.
+```sh
+yarn add @ovh-ux/ng-ovh-responsive-popover
+```
+
+## Usage
+
+```js
+import angular from 'angular';
+import '@ovh-ux/ng-ovh-responsive-popover';
+
+angular
+  .module('myApp', [
+    'ngOvhResponsivePopover',
+  ]);
+```
 
 The two major directives are:
 - the `responsivePopover` directive that will display a uibPopover to the DOM element you instanciate it;
@@ -14,51 +28,7 @@ The two major directives are:
 
 **Note:** when ui-bootstrap will be updated to version >= 2.0, it should be possible to remove `responsivePopover` directive and use uibPopover directive with custom class responsive-popover-class. So `responsivePopoverClass` directive will be the only directive of this component.
 
-## Dependencies
-
-- [matchmedia-ng](https://github.com/AnalogJ/matchmedia-ng)
-- [ui.bootstrap](https://angular-ui.github.io/bootstrap)
-
-# Installation
-
-## Bower
-
-  bower install ovh-angular-responsive-popover --save
-
-## NPM
-
-  npm install ovh-angular-responsive-popover --save
-
-## Get the sources
-
-```bash
-  git clone https://github.com/ovh-ux/ovh-angular-responsive-popover.git
-  cd ovh-angular-responsive-popover
-  npm install
-  bower install
-```
-
-You've developed a new cool feature ? Fixed an annoying bug ? We'd be happy
-to hear from you !
-
-Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-angular-responsive-popover/blob/master/CONTRIBUTING.md)
-
-# Related links
-
-* Contribute: https://github.com/ovh-ux/ovh-angular-responsive-popover/blob/master/CONTRIBUTING.md
-* Report bugs: https://github.com/ovh-ux/ovh-angular-responsive-popover/issues
-* Get latest version: https://github.com/ovh-ux/ovh-angular-responsive-popover
-
 Then inject responsivePopover module in your module declaration:
-
-```js
-import angular from 'angular';
-
-angular
-  .module('myApp', [
-    'ovh-angular-responsive-popover',
-  ]);
-```
 
 ## Documentation
 
@@ -101,7 +71,7 @@ It is automatically setted by `responsivePopover` directive.
 
 * relates to the service : [responsivePopover](#responsivePopover_service_responsivePopover)
 
-responsivePopoverProvider allows developper to configure which mediaQuery will be considered as a mobile.
+responsivePopoverProvider allows developer to configure which mediaQuery will be considered as a mobile.
 
 #### Methods
 ##### setMobileMediaQuery
@@ -148,6 +118,21 @@ Get the current configured media query. It is used to detect the popover display
 | ---- | ---- |
 | String | The configured mediaQuery. |
 
-# License
+## Test
 
-See https://github.com/ovh-ux/ovh-angular-responsive-popover/blob/master/LICENSE
+```sh
+yarn test
+```
+
+## Related
+
+- [matchmedia-ng](https://github.com/AnalogJ/matchmedia-ng)
+- [ui.bootstrap](https://angular-ui.github.io/bootstrap)
+
+## Contributing
+
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ng-ovh-responsive-popover/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ng-ovh-responsive-popover/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
+
+## License
+
+[BSD-3-Clause](LICENSE) © OVH SAS
